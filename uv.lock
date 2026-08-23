@@ -1289,6 +1289,20 @@ wheels = [
 ]
 
 [[package]]
+name = "firecrawl-anydoc"
+version = "0.2.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/35/54/ee43b1661a954e53eaed85878a7ccc37ed73e02e6577bb26437ec5f9de94/firecrawl_anydoc-0.2.4.tar.gz", hash = "sha256:3e29460272fea81cde08fd5af11f6b0f1ff05919214ddc939867f72362c83032", size = 270706, upload-time = "2026-08-27T19:13:58.156Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/25/f1/5616b8d703b2bf5688eda86ede4b35620356d9c60346fe2d3efbec2a872d/firecrawl_anydoc-0.2.4-cp310-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e3745a8b108d6575beafd37bcefe52e3f6c7ab44138e05cbdf4c6adf63caba84", size = 3441281, upload-time = "2026-08-27T19:13:43.408Z" },
+    { url = "https://files.pythonhosted.org/packages/59/7d/4b2a466c8953af3b9d94471081b04ce8636680111402d2140105f98c02e5/firecrawl_anydoc-0.2.4-cp310-abi3-macosx_11_0_arm64.whl", hash = "sha256:b2a01eecaa0b99f99ff6749a098f8c7a5250d41db9c53673eb93536ad575bfed", size = 3262365, upload-time = "2026-08-27T19:13:46.362Z" },
+    { url = "https://files.pythonhosted.org/packages/77/b5/5784fc514f58ca19328faee701d2cc2e25961389c2d4908b2a51a1071ee4/firecrawl_anydoc-0.2.4-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:17720ba093820654162891d7995fd2dbae948b16fe1c174ba799bddfc0b92ad6", size = 3265363, upload-time = "2026-08-27T19:13:48.425Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/16/feeca9705bfdb237f1cb69ede0b373b144c0d51df4297e595a74b815557e/firecrawl_anydoc-0.2.4-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0e5aed01bf6d4e5c588d3363888293f2ceeb9feb00449a32e0ba993797cf0bd3", size = 3506751, upload-time = "2026-08-27T19:13:50.372Z" },
+    { url = "https://files.pythonhosted.org/packages/14/28/b4d0d3c5345cdd65c0b9113c6e6ff1b717fe360dccb658db2a9952315f9c/firecrawl_anydoc-0.2.4-cp310-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:dd162b5eb64478fcf02f53abe7765e26f4350ba657f36c25f055c4cc3dbade0a", size = 3443075, upload-time = "2026-08-27T19:13:52.417Z" },
+    { url = "https://files.pythonhosted.org/packages/cb/29/50c52b0ea5dd645aea6d195da913c8d9e136601eec465bd9a590edd250c7/firecrawl_anydoc-0.2.4-cp310-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:e57c79093c1592929dd8dfaf6c60b49eefe631721d96fb833c3f465472b37b9f", size = 3742860, upload-time = "2026-08-27T19:13:54.474Z" },
+]
+
+[[package]]
 name = "flower"
 version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2999,6 +3013,7 @@ dependencies = [
     { name = "drf-spectacular-sidecar" },
     { name = "drf-writable-nested" },
     { name = "filelock" },
+    { name = "firecrawl-anydoc" },
     { name = "flower" },
     { name = "gotenberg-client", extra = ["httpx"] },
     { name = "httpx-oauth" },
@@ -3015,6 +3030,7 @@ dependencies = [
     { name = "ocrmypdf", extra = ["heic"] },
     { name = "openai" },
     { name = "pathvalidate" },
+    { name = "pdf-inspector" },
     { name = "pdf2image" },
     { name = "python-dateutil" },
     { name = "python-dotenv" },
@@ -3139,7 +3155,7 @@ requires-dist = [
     { name = "django-compression-middleware", specifier = "~=0.5.0" },
     { name = "django-cors-headers", specifier = "~=4.9.0" },
     { name = "django-extensions", specifier = "~=4.1" },
-    { name = "django-filter", specifier = ">=25.1,<27.0" },
+    { name = "django-filter", specifier = ">=25.1,<27" },
     { name = "django-guardian", specifier = ">=3.3.3,<3.6" },
     { name = "django-multiselectfield", specifier = "~=1.0.1" },
     { name = "django-rich", specifier = "~=2.2.0" },
@@ -3150,6 +3166,7 @@ requires-dist = [
     { name = "drf-spectacular-sidecar", specifier = ">=2026.7.1,<2026.10" },
     { name = "drf-writable-nested", specifier = "~=0.7.1" },
     { name = "filelock", specifier = "~=3.32.0" },
+    { name = "firecrawl-anydoc", specifier = ">=0.2.3" },
     { name = "flower", specifier = ">=2.0.1,<2.3" },
     { name = "gotenberg-client", extras = ["httpx"], specifier = "~=1.0" },
     { name = "granian", extras = ["uvloop"], marker = "extra == 'webserver'", specifier = ">=2.7,<2.9" },
@@ -3168,6 +3185,7 @@ requires-dist = [
     { name = "ocrmypdf", extras = ["heic"], specifier = ">=17.12,<17.13" },
     { name = "openai", specifier = ">=2.48" },
     { name = "pathvalidate", specifier = "~=3.3.1" },
+    { name = "pdf-inspector", specifier = ">=1.17" },
     { name = "pdf2image", specifier = "~=1.17.0" },
     { name = "psycopg", extras = ["c", "pool"], marker = "extra == 'postgres'", specifier = "==3.3.4" },
     { name = "psycopg-c", marker = "python_full_version == '3.12.*' and platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'postgres'", url = "https://github.com/paperless-ngx/builder/releases/download/psycopg-trixie-3.3.4/psycopg_c-3.3.4-cp312-cp312-linux_aarch64.whl" },
@@ -3280,6 +3298,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/fa/2a/52a8da6fe965dea6192eb716b357558e103aea0a1e9a8352ad575a8406ca/pathvalidate-3.3.1.tar.gz", hash = "sha256:b18c07212bfead624345bb8e1d6141cdcf15a39736994ea0b94035ad2b1ba177", size = 63262, upload-time = "2025-06-15T09:07:20.736Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9a/70/875f4a23bfc4731703a5835487d0d2fb999031bd415e7d17c0ae615c18b7/pathvalidate-3.3.1-py3-none-any.whl", hash = "sha256:5263baab691f8e1af96092fa5137ee17df5bdfbd6cff1fcac4d6ef4bc2e1735f", size = 24305, upload-time = "2025-06-15T09:07:19.117Z" },
+]
+
+[[package]]
+name = "pdf-inspector"
+version = "1.25.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/93/1c6e6a34084795a9749e091cb847fe94135dc4e1f50ad502d931490a31c5/pdf_inspector-1.25.2.tar.gz", hash = "sha256:227537eb91c8afbcd995c386ff5e10683286f3b44e6d385e143304255f72ee92", size = 2120655, upload-time = "2026-09-28T07:04:12.818Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b6/47/e89568d0c30e6edb2640490fca6979fc8c8888901aab31a13d8ea22ee634/pdf_inspector-1.25.2-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:9762bb04a82d72667201fe54aaadcf2f4f10ff7e7fd56cbfa09fbf969feedc4b", size = 6349883, upload-time = "2026-09-28T07:04:04.462Z" },
+    { url = "https://files.pythonhosted.org/packages/02/99/866fa4c3c45ee449abda4623283c2e27d60ce565eea98901d9e2131dc36b/pdf_inspector-1.25.2-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:7664d87d400c2b4057b6e5d3897954a21d4a0eec6883062e970fa42d75761da5", size = 6057124, upload-time = "2026-09-28T07:04:06.205Z" },
+    { url = "https://files.pythonhosted.org/packages/9b/b4/59f2e2da96045267960255958bd8c152f8001de7250583bad3f6eb6268a3/pdf_inspector-1.25.2-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:436e620154b0d8f2a3648acb52a1ce169333a5bd0dd4e8988ce159f17d40adc4", size = 6620814, upload-time = "2026-09-28T07:04:07.792Z" },
+    { url = "https://files.pythonhosted.org/packages/29/5c/2009e2183eeb531e5b39e7f9a4684570bed429a6f24cc8140f7129600fd2/pdf_inspector-1.25.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0a2596febc67d1177d1dc3e58e2d364be03c33f4e3180c13367d1918cb17d018", size = 6881039, upload-time = "2026-09-28T07:04:09.375Z" },
 ]
 
 [[package]]
