@@ -1,16 +1,21 @@
+from __future__ import annotations
+
 from pathlib import Path
 from types import SimpleNamespace
+from typing import TYPE_CHECKING
 
 import httpx
 import pytest
-from pytest_django.fixtures import SettingsWrapper
-from pytest_httpx import HTTPXMock
-from pytest_mock import MockerFixture
 
 from documents.parsers import ParseError
 from paperless.parsers import ParserContext
 from paperless.parsers import ParserProtocol
 from paperless.parsers.anydoc import AnydocDocumentParser
+
+if TYPE_CHECKING:
+    from pytest_django.fixtures import SettingsWrapper
+    from pytest_httpx import HTTPXMock
+    from pytest_mock import MockerFixture
 
 ODT_MIME = "application/vnd.oasis.opendocument.text"
 
