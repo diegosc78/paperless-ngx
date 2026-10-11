@@ -42,7 +42,7 @@ services:
       MARIADB_PASSWORD: paperless
       MARIADB_ROOT_PASSWORD: paperless
   webserver:
-    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    image: docker.io/ponte124/paperless-ngx:26.10.11
     restart: unless-stopped
     depends_on:
       - db
@@ -62,6 +62,15 @@ services:
       PAPERLESS_DBUSER: paperless # only needed if non-default username
       PAPERLESS_DBPASS: paperless # only needed if non-default password
       PAPERLESS_DBPORT: 3306
+  gotenberg:
+    image: docker.io/gotenberg/gotenberg:8.34
+    restart: unless-stopped
+    # The gotenberg chromium route is used to convert .eml files. We do not
+    # want to allow external content like tracking pixels or even javascript.
+    command:
+      - "gotenberg"
+      - "--chromium-disable-javascript=true"
+      - "--chromium-allow-list=file:///tmp/.*"
 volumes:
   data:
   media:

@@ -472,7 +472,7 @@ class AnydocDocumentParser:
         all (connection error), the document is still ingested with its
         extracted text but without a PDF preview.  Errors reported *by*
         Gotenberg for this specific document are fatal, since they usually
-        indicate an unparseable file.
+        indicate an unparsable file.
 
         Parameters
         ----------
